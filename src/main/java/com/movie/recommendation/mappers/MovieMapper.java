@@ -15,7 +15,7 @@ public class MovieMapper {
                 .tconst(resultSet.getString("tconst"))
                 .titleType(resultSet.getString("titletype"))
                 .primaryTitle(resultSet.getString("primarytitle"))
-                .runtimeMinutes(resultSet.getString("runtimeminutes"))
+                .runtimeMinutes(resultSet.getInt("runtimeminutes"))
                 .genres(resultSet.getString("genres"))
                 .build();
     }

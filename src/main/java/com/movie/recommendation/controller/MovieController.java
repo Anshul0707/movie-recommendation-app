@@ -1,5 +1,6 @@
 package com.movie.recommendation.controller;
 
+import com.movie.recommendation.dto.Response;
 import com.movie.recommendation.model.Movie;
 import com.movie.recommendation.service.MovieService;
 import lombok.extern.slf4j.Slf4j;
@@ -30,6 +31,19 @@ public class MovieController {
 
     @GetMapping("/longest-duration-movies")
     public List<Movie> getLongestDurationMovies() {
-        return movieService.getLongestDurationMovies();
+        Response response;
+        List<Movie> movies = null;
+
+        try {
+            movies = movieService.getLongestDurationMovies();
+            response = new Response();
+            response.setStatus("Success");
+            response.setMessage("Get All Movies.");
+        } catch (Exception ex) {
+            response = new Response();
+            response.setStatus("Failure");
+            response.setMessage("Can't get All Movies.");
+        }
+        return movies;
     }
 }

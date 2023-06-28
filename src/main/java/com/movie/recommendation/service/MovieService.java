@@ -10,11 +10,21 @@ public class MovieService {
 
     MovieDAO movieDAO;
 
+    public MovieService(MovieDAO movieDAO){
+        this.movieDAO = movieDAO;
+    }
     public List<Movie> getAllMovies() {
         return movieDAO.getAllMovies();
     }
 
     public List<Movie> getLongestDurationMovies() {
-        return movieDAO.getLongestDurationMovies();
+
+        List<Movie> longestDurationMovies = null;
+        try{
+           longestDurationMovies = movieDAO.getLongestDurationMovies();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return longestDurationMovies;
     }
 }
