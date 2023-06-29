@@ -26,9 +26,8 @@ public class MovieController {
 
 
     @GetMapping("/longest-duration-movies")
-    public List<Movie> getLongestDurationMovies(@RequestParam(value = "limit",
-            defaultValue = "10") int limit, @RequestParam(value = "sortType",
-            defaultValue = "DESC") String sortType) {
+    public List<Movie> getLongestDurationMovies(@RequestParam(value = "limit", defaultValue = "10") int limit,
+                                                @RequestParam(value = "sortType", defaultValue = "DESC") String sortType) {
 
         Response response;
         List<Movie> movies = null;
@@ -56,11 +55,12 @@ public class MovieController {
     }
 
     @GetMapping("/top-rated-movies")
-    public List<Movie> getTopRatedMovies() {
+    public List<Movie> getTopRatedMovies(@RequestParam(value = "limit",defaultValue = "6.0") double limit,
+                                         @RequestParam(value = "sortType",defaultValue = "DESC") String sortType) {
         Response response;
         List<Movie> movies = null;
         try {
-            movies = movieService.getTopRatedMovies();
+            movies = movieService.getTopRatedMovies(limit,sortType );
             response = new Response();
             response.setStatus("Success");
             response.setMessage("Get top-rated-movies");
@@ -88,5 +88,18 @@ public class MovieController {
         }
         return movies;
     }
+
+    @PostMapping("/update-runtime-minutes")
+    public ResponseEntity<String> updateRuntimeMinutes() {
+        boolean success = movieService.updateRuntimeMinutes();
+        if (success) {
+            return ResponseEntity.ok("success");
+        } else {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+
+
 
 }

@@ -39,10 +39,10 @@ public class MovieService {
         }
     }
 
-    public List<Movie> getTopRatedMovies() {
+    public List<Movie> getTopRatedMovies(double limit, String sortType) {
         List<Movie> topRatedMovies = null;
         try {
-            topRatedMovies = movieDAO.getTopRatedMovies();
+            topRatedMovies = movieDAO.getTopRatedMovies(limit,sortType);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -57,5 +57,15 @@ public class MovieService {
             e.printStackTrace();
         }
         return genreMoviesWithSubtotals;
+    }
+
+    public boolean updateRuntimeMinutes() {
+        try {
+            movieDAO.updateRuntimeMinutes();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }

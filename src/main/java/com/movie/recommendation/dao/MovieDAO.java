@@ -10,9 +10,11 @@ public interface MovieDAO {
 
     List<Movie> getLongestDurationMovies(int limit, String sortType);
 
-    List<Movie> getTopRatedMovies();
+    List<Movie> getTopRatedMovies(double limit, String sortType);
 
     public boolean saveMovie(Movie movie);
 
     List<Movie> getGenreMoviesWithSubtotals();
+
+    void updateRuntimeMinutes();
 }

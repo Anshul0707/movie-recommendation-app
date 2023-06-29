@@ -36,13 +36,13 @@ public class MovieDAOImpl implements MovieDAO {
 
 
     @Override
-    public List<Movie> getTopRatedMovies() {
+    public List<Movie> getTopRatedMovies(double limit, String sortType) {
         String sql = "SELECT movies.tconst, movies.primaryTitle, movies.genres, AVG(ratings.averageRating) AS averageRating\n" +
                 "FROM ratings\n" +
                 "INNER JOIN movies ON ratings.tconst = movies.tconst\n" +
                 "GROUP BY movies.tconst, movies.primaryTitle, movies.genres\n" +
-                "HAVING AVG(ratings.averageRating) > 6.0\n" +
-                "ORDER BY AVG(ratings.averageRating) DESC\n";
+                "HAVING AVG(ratings.averageRating) > " + limit + " " +
+                "ORDER BY AVG(ratings.averageRating) " + sortType + " ";
         try {
             return databaseConfiguration.getJdbcTemplate().query(sql, (resultSet, rowNum)
                     -> MovieMapper.buildMovieByRating(resultSet));
@@ -88,6 +88,23 @@ public class MovieDAOImpl implements MovieDAO {
 
         }
         return new ArrayList<>();
+    }
+
+    @Override
+    public void updateRuntimeMinutes() {
+
+        String sql = "UPDATE movies " +
+                "SET runtimeMinutes = CASE " +
+                "   WHEN genres = 'Documentary' THEN runtimeMinutes + 15 " +
+                "   WHEN genres = 'Animation' THEN runtimeMinutes + 30 " +
+                "   ELSE runtimeMinutes + 45 " +
+                "   END";
+
+        try {
+            databaseConfiguration.getJdbcTemplate().update(sql);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
