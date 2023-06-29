@@ -149,8 +149,6 @@ M.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_7_2.xml,
 X.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_7_3.xml,7\6\76e9127a5745e124a3cad44a5ace8a0f42bd1e7d
 p
 @.idea/libraries/Maven__org_springframework_spring_aop_5_3_22.xml,3\c\3cfb6b0ac886e5b578a1a07bff383206f460032a
-h
-8src/main/java/com/movie/recommendation/model/Rating.java,e\6\e65ed44a9b9581643b1ebc01b3adb0f5d92ecf62
 y
 I.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_7_2.xml,9\b\9b7ad621c27b0f47abaff55a3023e59eb36e39bb
 r

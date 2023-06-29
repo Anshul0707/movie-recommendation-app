@@ -7,11 +7,12 @@ import java.util.List;
 
 @Repository
 public interface MovieDAO {
-    List<Movie> getAllMovies();
 
-    List<Movie> getLongestDurationMovies();
-
-    String addNewMovie(Movie movies);
+    List<Movie> getLongestDurationMovies(int limit, String sortType);
 
     List<Movie> getTopRatedMovies();
+
+    public boolean saveMovie(Movie movie);
+
+    List<Movie> getGenreMoviesWithSubtotals();
 }

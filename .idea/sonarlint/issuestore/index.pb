@@ -191,5 +191,3 @@ t
 D.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_4.xml,9\4\946a6760d1c81dc2dee2feb019bf4882e9c3ae06
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-h
-8src/main/java/com/movie/recommendation/model/Rating.java,e\6\e65ed44a9b9581643b1ebc01b3adb0f5d92ecf62
