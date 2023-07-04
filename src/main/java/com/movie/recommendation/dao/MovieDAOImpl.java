@@ -100,6 +100,7 @@ public class MovieDAOImpl implements MovieDAO {
                 "   ELSE runtimeMinutes + 45 " +
                 "   END";
 
+
         try {
             databaseConfiguration.getJdbcTemplate().update(sql);
         } catch (Exception e) {

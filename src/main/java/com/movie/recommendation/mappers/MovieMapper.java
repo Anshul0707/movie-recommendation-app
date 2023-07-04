@@ -34,6 +34,7 @@ public class MovieMapper {
                 .build();
     }
 
+
     public static Movie buildMovieBySubTotal(ResultSet resultSet) throws SQLException {
         return buildBySubTotal(resultSet);
     }
