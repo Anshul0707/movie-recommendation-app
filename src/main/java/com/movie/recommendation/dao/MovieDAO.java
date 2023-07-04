@@ -12,7 +12,7 @@ public interface MovieDAO {
 
     List<Movie> getTopRatedMovies(double limit, String sortType);
 
-    public boolean saveMovie(Movie movie);
+    boolean saveMovie(Movie movie);
 
     List<Movie> getGenreMoviesWithSubtotals();
 
