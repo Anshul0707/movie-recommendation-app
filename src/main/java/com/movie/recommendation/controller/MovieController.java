@@ -55,12 +55,11 @@ public class MovieController {
     }
 
     @GetMapping("/top-rated-movies")
-    public List<Movie> getTopRatedMovies(@RequestParam(value = "limit",defaultValue = "6.0") double limit,
-                                         @RequestParam(value = "sortType",defaultValue = "DESC") String sortType) {
+    public List<Movie> getTopRatedMovies(@RequestParam(value = "limit", defaultValue = "6.0") double limit, @RequestParam(value = "sortType", defaultValue = "DESC") String sortType) {
         Response response;
         List<Movie> movies = null;
         try {
-            movies = movieService.getTopRatedMovies(limit,sortType );
+            movies = movieService.getTopRatedMovies(limit, sortType);
             response = new Response();
             response.setStatus("Success");
             response.setMessage("Get top-rated-movies");
