@@ -177,8 +177,6 @@ p
 @.idea/libraries/Maven__org_springframework_spring_web_5_3_22.xml,c\9\c90343bde870a92f172fa219c0d22ecafd280ca5
 b
 2.idea/libraries/Maven__org_yaml_snakeyaml_1_30.xml,3\c\3c9053362206afff74805f76190a4db80d948973
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 i
 9.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_0.xml,8\4\84f2ecf757628dc157db06b2c9aa0786a852e4b8
 ]
@@ -191,3 +189,5 @@ x
 H.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml,5\e\5e7d005d1bb81fff8fe7c895c41aa932c248953f
 t
 D.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_4.xml,9\4\946a6760d1c81dc2dee2feb019bf4882e9c3ae06
+h
+8src/main/java/com/movie/recommendation/model/Rating.java,e\6\e65ed44a9b9581643b1ebc01b3adb0f5d92ecf62

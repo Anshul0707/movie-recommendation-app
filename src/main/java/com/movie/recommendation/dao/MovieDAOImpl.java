@@ -25,6 +25,7 @@ public class MovieDAOImpl implements MovieDAO {
         String sql = "SELECT tconst, primaryTitle, runtimeMinutes, genres " +
                 "FROM movies ORDER BY runtimeMinutes " + sortType + " LIMIT " + limit;
         try {
+
             return databaseConfiguration.getJdbcTemplate().query(sql, (resultSet, rowNum)
                     -> MovieMapper.buildMovie(resultSet));
         } catch (DataAccessException ex) {
