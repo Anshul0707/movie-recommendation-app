@@ -10,6 +10,7 @@ public class MovieMapper {
         return build(resultSet);
     }
 
+
     private static Movie build(ResultSet resultSet) throws SQLException {
         return Movie.builder()
                 .tconst(resultSet.getString("tconst"))
