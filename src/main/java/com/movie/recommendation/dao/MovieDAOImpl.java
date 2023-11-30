@@ -100,8 +100,6 @@ public class MovieDAOImpl implements MovieDAO {
                 "   WHEN genres = 'Animation' THEN runtimeMinutes + 30 " +
                 "   ELSE runtimeMinutes + 45 " +
                 "   END";
-
-
         try {
             databaseConfiguration.getJdbcTemplate().update(sql);
         } catch (Exception e) {
