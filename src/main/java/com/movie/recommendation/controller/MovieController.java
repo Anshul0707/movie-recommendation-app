@@ -26,8 +26,7 @@ public class MovieController {
 
 
     @GetMapping("/longest-duration-movies")
-    public List<Movie> getLongestDurationMovies(@RequestParam(value = "limit", defaultValue = "10") int limit,
-                                                @RequestParam(value = "sortType", defaultValue = "DESC") String sortType) {
+    public List<Movie> getLongestDurationMovies(@RequestParam(value = "limit", defaultValue = "10") int limit, @RequestParam(value = "sortType", defaultValue = "DESC") String sortType) {
 
         Response response;
         List<Movie> movies = null;

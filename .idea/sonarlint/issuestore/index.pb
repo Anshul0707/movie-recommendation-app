@@ -195,5 +195,3 @@ h
 8src/main/java/com/movie/recommendation/dto/Response.java,0\d\0d7c9904fcf30eb75f355f7e7304ff3d51944fc3
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-v
-Fsrc/main/java/com/movie/recommendation/controller/MovieController.java,0\c\0cac92ac9061618ca78403638ad02108a11f69ec
