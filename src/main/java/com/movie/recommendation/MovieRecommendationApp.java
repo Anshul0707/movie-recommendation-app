@@ -18,6 +18,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
                 " - Show genre-wise movie lists with numVotes subtotals.\n\n" +
                 "The app utilizes an SQL database and an HTTP server to handle user requests and deliver accurate movie recommendations. It is implemented using [Java-SpringBoot] and follows RESTful API principles.",
         version = "1.0"
+
 ))
 public class MovieRecommendationApp implements CommandLineRunner {
 
