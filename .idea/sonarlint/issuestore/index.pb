@@ -190,8 +190,6 @@ H.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml,5\e\5
 t
 D.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_4.xml,9\4\946a6760d1c81dc2dee2feb019bf4882e9c3ae06
 h
-8src/main/java/com/movie/recommendation/model/Rating.java,e\6\e65ed44a9b9581643b1ebc01b3adb0f5d92ecf62
-h
 8src/main/java/com/movie/recommendation/dto/Response.java,0\d\0d7c9904fcf30eb75f355f7e7304ff3d51944fc3
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

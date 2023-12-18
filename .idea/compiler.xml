@@ -11,12 +11,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="movie-recommendation-app" target="1.8" />
+      <module name="movie-recommendation-app" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="movie-recommendation-app" options="-parameters" />
+      <module name="movie-recommendation-app" options="" />
     </option>
   </component>
 </project>
