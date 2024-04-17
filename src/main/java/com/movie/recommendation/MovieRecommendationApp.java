@@ -9,15 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @Slf4j
-@OpenAPIDefinition(info = @Info(
-        title = "Movie Recommendation App",
-        description = "The Movie Recommendation App is a web application that provides users with personalized movie recommendations based on runtime, rating, and genre. It includes the following features:\n" +
-                " - Retrieve the top 10 movies with the longest runtime.\n" +
-                " - Add new movies to the database.\n" +
-                " - Display highly-rated movies.\n" +
-                " - Show genre-wise movie lists with numVotes subtotals.\n\n" +
-                "The app utilizes an SQL database and an HTTP server to handle user requests and deliver accurate movie recommendations. It is implemented using [Java-SpringBoot] and follows RESTful API principles.",
-        version = "1.0"
+@OpenAPIDefinition(info = @Info(title = "Movie Recommendation App", description = "The Movie Recommendation App is a web application that provides users with personalized movie recommendations based on runtime, rating, and genre. It includes the following features:\n" + " - Retrieve the top 10 movies with the longest runtime.\n" + " - Add new movies to the database.\n" + " - Display highly-rated movies.\n" + " - Show genre-wise movie lists with numVotes subtotals.\n\n" + "The app utilizes an SQL database and an HTTP server to handle user requests and deliver accurate movie recommendations. It is implemented using [Java-SpringBoot] and follows RESTful API principles.", version = "1.0"
 
 ))
 public class MovieRecommendationApp implements CommandLineRunner {

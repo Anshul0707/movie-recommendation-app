@@ -19,6 +19,4 @@ public class Movie {
 
     private Double averageRating;
     private Integer numVotes;
-
-
 }
